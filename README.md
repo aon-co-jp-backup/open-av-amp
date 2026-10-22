@@ -36,6 +36,6 @@ IMAX Enhanced, Dolby and DTS certification need licences and were not done. 4DX 
 - Не выполнено: измерения, проверка HDMI, сертификации, переходные процессы, КНИ.
 
 ---
-**Newest: [SV-VER3](SV-VER3)** — external linear DC supply with R-core transformers, aluminium + wood chassis (ideas from SPEC). **Before: [SV-VER2](SV-VER2)** — all 11 channels in analog-input Class D (heat about 309 W worst case instead of 533 W), with an output-filter damper. SV-VER1 stays as the earlier version.
+**Newest: [SV-VER4](SV-VER4)** — supply, R-core and chassis re-verified (power rails unregulated large capacitors, analog/digital linear-regulated, 1.0 kVA R-core). **Before: [SV-VER3](SV-VER3)** — external linear DC supply with R-core transformers, aluminium + wood chassis (ideas from SPEC). **Before: [SV-VER2](SV-VER2)** — all 11 channels in analog-input Class D (heat about 309 W worst case instead of 533 W), with an output-filter damper. SV-VER1 stays as the earlier version.
 
 Files: [`SV-VER1/`](SV-VER1) (figures JPG + PDF), scripts in [`scripts/SV-VER1/`](scripts/SV-VER1) (saved per version). Related: [open-network-amp](https://github.com/aon-co-jp/open-network-amp) (integrated amplifier VER1-VER6). Home page: https://audiocafe.tokyo/
