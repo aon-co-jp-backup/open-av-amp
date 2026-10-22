@@ -68,9 +68,9 @@ def compose(fn, keys, heading):
     print(fn, img.size)
 
 
-compose("surround_v7_balanced.jpg", ["hp", "os", "net", "rf", "rest"], "SV-VER7 全段バランス / Fully balanced — 説明 / Explanation (8 languages)")
-compose("surround_v7_unbalanced.jpg", ["hp", "os", "net", "rf", "rest"], "SV-VER7 アンバランス / Unbalanced — 説明 / Explanation (8 languages)")
-man = text_panel(["title", "hp", "os", "net", "sim", "rf", "rest"], "SV-VER7 説明書 / Manual (日本語 · English US/UK · Русский · Українська · Deutsch · Italiano · Français)")
+compose("surround_v7_balanced.jpg", ["hp", "sw", "os", "net", "rf", "rest"], "SV-VER7 全段バランス / Fully balanced — 説明 / Explanation (8 languages)")
+compose("surround_v7_unbalanced.jpg", ["hp", "sw", "os", "net", "rf", "rest"], "SV-VER7 アンバランス / Unbalanced — 説明 / Explanation (8 languages)")
+man = text_panel(["title", "hp", "sw", "os", "net", "sim", "rf", "rest"], "SV-VER7 説明書 / Manual (日本語 · English US/UK · Русский · Українська · Deutsch · Italiano · Français)")
 man.save(D + "/manual-sv7.jpg", "JPEG", quality=90, dpi=(300, 300))
 man.save(D + "/manual-sv7.pdf", resolution=300)
 md = ["# SV-VER7 — %s\n" % TITLE["ja"],
@@ -78,7 +78,7 @@ md = ["# SV-VER7 — %s\n" % TITLE["ja"],
       "Figures: `surround_v7_balanced.jpg`, `surround_v7_unbalanced.jpg` (each with the 8-language explanation below the figure; bare figures in `figures-only/`), `manual-sv7.jpg` / `manual-sv7.pdf`, `surround-av-amp-v7.pdf`. Reference design, Python calculations (see SV-VER6 and HP-VER2), not bench measurements.\n"]
 for L in LANG8:
     md.append("## %s\n" % NAME8[L]); md.append("**%s**\n" % TITLE[L])
-    for k in ("hp", "os", "net", "sim", "rf", "rest"):
+    for k in ("hp", "sw", "os", "net", "sim", "rf", "rest"):
         md.append("- " + dec(L, T[k][L]))
     md.append("")
 open(D + "/README.md", "w", encoding="utf-8").write("\n".join(md))
