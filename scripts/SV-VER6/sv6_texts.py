@@ -53,3 +53,5 @@ T = {
 }
 for k in T:
     T[k]["en-GB"] = T[k]["en"].replace("analog", "analogue").replace("ground loops", "earth loops").replace(" licence", " licence")
+
+TITLE["en-GB"] = TITLE["en"].replace("analog", "analogue")
