@@ -16,3 +16,10 @@ Figure / 図: `volume_hybrid.jpg`. Spec / 仕様: [VOLUME-STEP-SPEC.md](https://
 - All 12 channels stay differential; each channel and leg gets a binary ladder (eight latching relays, 0.5/1/2/4/8/16/32/64 dB), driven together by one knob: 12 ch x 2 legs x 8 = 192 relays.
 - Smooth mode fills the +-0.25 dB between relay positions (0.5 dB grid) with a 32-bit digital trim (about 0.04 bit lost). With SW5 (bit-perfect) the resolution is 0.5 dB.
 - Not verified: board area and cost of 192 relays, channel tracking, level steps and muting at relay switching, bench measurements.
+
+
+## 音質エミュレーターの結果と見直し (2026-11-16) / Sound-quality emulator review
+- 回路図 (10 言語、JPG と PDF): `sv11-volume-<言語>.jpg`、`sv11-volume-10lang.pdf`、解説ページ `volume.html`。Figures in 10 languages (JPG and PDF) and the explanation page `volume.html`.
+- エミュレーター (Python の計算、実機測定ではありません): `scripts/.../volume_sim.py`、結果 `volume_sim_result.txt`。The emulator is a Python calculation, not a bench measurement.
+- 見直し: 旧案の 2 進 8 セル (64dB の分路抵抗が約 0.25Ω で非現実的) を、微調整 5 セル + 16dB×5 (最小 65Ω) へ。入出力をバッファして Z0=200Ω で整合 (不整合 50Ω/100kΩ では最大 5.3dB ずれる)。工場で 181 位置の誤差を測り、テーブルで補正 (±0.005dB)。Old binary 8 cells (a 64 dB shunt of about 0.25 ohm) replaced by 5 fine cells + 5 x 16 dB (smallest 65 ohm); buffered and matched at Z0 = 200 ohm (a 50 ohm / 100 kohm mismatch is off by up to 5.3 dB); a factory error table corrects the 181 positions (±0.005 dB).
+- 限界: リレーの分路側の接触抵抗、切替時のグリッチ、実機の配線は未モデル。Not modelled: relay contact resistance in the shunt leg, switching glitches, real wiring.
