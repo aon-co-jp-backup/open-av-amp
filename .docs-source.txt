@@ -1,3 +1,3 @@
 source: aon-co-jp/open-av-amp
-commit: 3bc283626d977074269a00007478b6bc69922d85
-updated: 2026-11-20T05:23:20Z
+commit: 6ad345f067f899f7cf17744eb03875edc25f019f
+updated: 2026-11-24T10:47:34Z

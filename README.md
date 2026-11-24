@@ -1,3 +1,5 @@
+> Latest translations / 翻訳の最新版: [0-LATEST-TRANSLATIONS.md](0-LATEST-TRANSLATIONS.md)
+
 # open-av-amp — SV-VER1 — Surround AV amplifier / サラウンド AV アンプ / Surround-AV-Verstärker / AV-ресивер объёмного звука
 
 Reference design (not a product). Python calculations, not SPICE or bench measurements. Figures: `surround_balanced.jpg` (fully balanced), `surround_unbalanced.jpg`, `surround_sim.jpg` (5 test/debug rounds); all in `surround-av-amp.pdf`.
